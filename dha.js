@@ -849,7 +849,7 @@ dha.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
         timestampe = speed();
         latensie = speed() - timestampe
         thu = await dha.getStatus(`${sender.split('@')[0]}@s.whatsapp.net`, MessageType.text)
-        menu =`𝐇𝐄𝐋𝐋𝐎𝐖𝐎𝐑𝐋𝐃👋🏻
+        info = `𝐇𝐄𝐋𝐋𝐎𝐖𝐎𝐑𝐋𝐃👋🏻
 *〶 NAMA : ${pushname}*
 *〶 TAG : @${sender.split("@")[0]}*
 *〶 STATUS : ${isOwner ? 'OWNER' : isPremium ? 'Premium' : 'Free'}*
@@ -859,9 +859,8 @@ dha.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 *〶 GRUP CHAT : ${groups.length}*
 *〶 PRIVAT CHAT : ${privat.length}*
 *〶 TOTAL CHAT : ${totalChat.length}*
-*〶 SPEED : ${latensie.toFixed(4)}*
-   
-𝐎𝐖𝐍𝐄𝐑 𝐌𝐄𝐍𝐔
+*〶 SPEED : ${latensie.toFixed(4)}*`
+menu =`𝐎𝐖𝐍𝐄𝐑 𝐌𝐄𝐍𝐔
 *✘⃟🍁 ${prefix}bc* _teks_
 *✘⃟🍁 ${prefix}tobc* _audio_
 *✘⃟🍁 ${prefix}term*
@@ -1065,7 +1064,7 @@ dha.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 *✘⃟🍁 ${prefix}babi*
 *✘⃟🍁 ${prefix}cekganteng*
 *✘⃟🍁 ${prefix}cekcantik*`
-               dha.sendMessage(from, { contentText: `${menu}`, footerText: `Active: ${runtime(process.uptime())}`, buttons: [{buttonId: `${prefix}owner`,buttonText:{displayText: '</OWNER'},type:1},{buttonId: `${prefix}sewabot`,buttonText:{displayText: '</SEWA'},type:1},{buttonId: `${prefix}botstat`,buttonText:{displayText: '</INFO'},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: pink, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+               dha.sendMessage(from, { contentText: `${info}`, footerText: `${menu}`, buttons: [{buttonId: `${prefix}owner`,buttonText:{displayText: '</OWNER'},type:1},{buttonId: `${prefix}sewabot`,buttonText:{displayText: '</SEWA'},type:1},{buttonId: `${prefix}botstat`,buttonText:{displayText: '</INFO'},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: pink, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
                 break
         case 'command8':
                list = []
